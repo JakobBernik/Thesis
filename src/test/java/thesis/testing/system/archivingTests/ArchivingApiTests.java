@@ -1,19 +1,13 @@
 package thesis.testing.system.archivingTests;
 
-
 import org.testng.annotations.*;
-import thesis.testing.system.ServiceSimulator;
-import thesis.testing.system.archivingMocks.ArchivingApiDelegate;
+import thesis.testing.system.archivingMocks.ArchivingApiClient;
 import thesis.testing.system.archivingMocks.DataPacket;
 import thesis.testing.system.oldbMocks.DataPoint;
 import thesis.testing.utils.ArchivingException;
-import thesis.testing.utils.DaemonFactory;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -21,7 +15,7 @@ import static org.testng.Assert.assertTrue;
 /**
  * Integration test for archiving API
  */
-public class ArchivingApiDelegateTest {
+public class ArchivingApiTests {
 
     private final static String ID_FORMAT = "%s%d";
     private final static String DP_BASE_ID = "dp_";
@@ -31,30 +25,10 @@ public class ArchivingApiDelegateTest {
     private DataPoint dp3 = new DataPoint(String.format(ID_FORMAT, DP_BASE_ID, 3), 3, true);
     private List<UUID> testingPacketsIds = new ArrayList<>();
 
-    private final ExecutorService executorService;
-    private ArchivingApiDelegate client;
+    private ArchivingApiClient client;
 
-    public ArchivingApiDelegateTest() throws ArchivingException {
-        executorService = Executors.newSingleThreadExecutor(new DaemonFactory());
-        client = new ArchivingApiDelegate();
-
-    }
-
-    /**
-     * Launches the service before tests
-     */
-    public void startService(){
-        executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    ServiceSimulator.main(new String[]{});
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
+    public ArchivingApiTests() throws ArchivingException {
+        client = new ArchivingApiClient();
     }
 
     /**
@@ -72,17 +46,6 @@ public class ArchivingApiDelegateTest {
     @AfterMethod
     public void cleanup(){
         client.cleanData();
-    }
-
-    /**
-     * Shutdown executor service
-     * @throws InterruptedException
-     */
-    public void endService() throws InterruptedException {
-        executorService.shutdown();
-        if (!executorService.awaitTermination(5, TimeUnit.SECONDS)){
-            executorService.shutdownNow();
-        }
     }
 
     /**
@@ -125,7 +88,7 @@ public class ArchivingApiDelegateTest {
      */
     @Test(expectedExceptions = {ArchivingException.class})
     public void storeInvalidDataPacketsTest() throws ArchivingException {
-        client.storeData(Collections.singletonList(new DataPoint("dp_6",142,false)));
+        client.storeData(Collections.singletonList(new DataPoint("dp_6",-1,false)));
     }
 
     /**
@@ -149,7 +112,6 @@ public class ArchivingApiDelegateTest {
         assertTrue(packetIds.contains(testingPacketsIds.get(1)));
         assertTrue(packetIds.contains(testingPacketsIds.get(2)));
     }
-
 
     /**
      * Test if exception is thrown when trying to execute invalid query
