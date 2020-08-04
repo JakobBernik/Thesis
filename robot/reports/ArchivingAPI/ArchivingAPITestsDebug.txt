@@ -1,0 +1,418 @@
+==============================================================================
+20200804 19:38:28.152 - INFO - + START SUITE: 01 ArchivingAPITests [ ]
+==============================================================================
+20200804 19:38:28.153 - INFO - +- START TEST: Get existing data packets test [ ]
+------------------------------------------------------------------------------
+20200804 19:38:28.153 - INFO - +-- START KW: Run archivingAPI test [ getExistingDataPacketsTest ]
+20200804 19:38:28.154 - INFO - +--- START KW: Run Java test [ thesis.testing.system.archivingTests.ArchivingApiTests | ${testName} ]
+20200804 19:38:28.154 - INFO - +---- START KW: BuiltIn.Log To Console [ . ]
+20200804 19:38:28.155 - DEBUG - Test timeout 2 minutes active. 119.998 seconds left.
+20200804 19:38:28.156 - INFO - +---- END KW: BuiltIn.Log To Console (2)
+20200804 19:38:28.156 - INFO - +---- START KW: BuiltIn.Log To Console [ Executing Java CLI test ${testName}. ]
+20200804 19:38:28.156 - DEBUG - Test timeout 2 minutes active. 119.997 seconds left.
+20200804 19:38:28.157 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:28.157 - INFO - +---- START KW: Process.Run Process [ ${java_cli} | thesis.testing.runner.NgRunner | ${group} | ${testName} | shell=yes ]
+20200804 19:38:28.158 - DEBUG - Test timeout 2 minutes active. 119.995 seconds left.
+20200804 19:38:28.159 - INFO - Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchivingApiTests getExistingDataPacketsTest
+20200804 19:38:28.159 - DEBUG - Process configuration:
+cwd:     C:\Users\Asus\Desktop\TestingSystem
+shell:   True
+stdout:  PIPE
+stderr:  PIPE
+alias:   None
+env:     None
+20200804 19:38:28.163 - INFO - Waiting for process to complete.
+20200804 19:38:31.449 - INFO - Process completed.
+20200804 19:38:31.449 - INFO - ${status} = <result object with rc 0>
+20200804 19:38:31.449 - INFO - +---- END KW: Process.Run Process (3292)
+20200804 19:38:31.449 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stdout} ]
+20200804 19:38:31.454 - DEBUG - Test timeout 2 minutes active. 116.699 seconds left.
+20200804 19:38:31.454 - INFO - +---- END KW: BuiltIn.Log To Console (5)
+20200804 19:38:31.454 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stderr} ]
+20200804 19:38:31.454 - DEBUG - Test timeout 2 minutes active. 116.699 seconds left.
+20200804 19:38:31.454 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:31.454 - INFO - +---- START KW: BuiltIn.Log [ ${status.stdout} ]
+20200804 19:38:31.454 - DEBUG - Test timeout 2 minutes active. 116.699 seconds left.
+20200804 19:38:31.454 - INFO -
+20200804 19:38:31.454 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:31.454 - INFO - +---- START KW: BuiltIn.Log [ ${status.stderr} ]
+20200804 19:38:31.454 - DEBUG - Test timeout 2 minutes active. 116.699 seconds left.
+20200804 19:38:31.454 - INFO -
+20200804 19:38:31.454 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:31.454 - INFO - +---- START KW: OperatingSystem.Get File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:31.454 - DEBUG - Test timeout 2 minutes active. 116.699 seconds left.
+20200804 19:38:31.454 - INFO - Getting file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:31.454 - INFO - ${exitCode} = 0
+20200804 19:38:31.454 - INFO - +---- END KW: OperatingSystem.Get File (0)
+20200804 19:38:31.454 - INFO - +---- START KW: OperatingSystem.Remove File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:31.454 - DEBUG - Test timeout 2 minutes active. 116.699 seconds left.
+20200804 19:38:31.454 - INFO - Removed file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:31.454 - INFO - +---- END KW: OperatingSystem.Remove File (0)
+20200804 19:38:31.464 - INFO - +---- START KW: BuiltIn.Should Be Equal As Integers [ ${exitCode} | 0 | Test failed, examine log in report ]
+20200804 19:38:31.464 - DEBUG - Test timeout 2 minutes active. 116.689 seconds left.
+20200804 19:38:31.464 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20200804 19:38:31.464 - INFO - +---- END KW: BuiltIn.Should Be Equal As Integers (0)
+20200804 19:38:31.464 - INFO - +--- END KW: Run Java test (3310)
+20200804 19:38:31.464 - INFO - +-- END KW: Run archivingAPI test (3311)
+------------------------------------------------------------------------------
+20200804 19:38:31.464 - INFO - +- END TEST: Get existing data packets test (3311)
+------------------------------------------------------------------------------
+20200804 19:38:31.464 - INFO - +- START TEST: Get missing data packets test [ ]
+------------------------------------------------------------------------------
+20200804 19:38:31.464 - INFO - +-- START KW: Run archivingAPI test [ getMissingDataPacketsTest ]
+20200804 19:38:31.464 - INFO - +--- START KW: Run Java test [ thesis.testing.system.archivingTests.ArchivingApiTests | ${testName} ]
+20200804 19:38:31.464 - INFO - +---- START KW: BuiltIn.Log To Console [ . ]
+20200804 19:38:31.464 - DEBUG - Test timeout 2 minutes active. 120.0 seconds left.
+20200804 19:38:31.464 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:31.464 - INFO - +---- START KW: BuiltIn.Log To Console [ Executing Java CLI test ${testName}. ]
+20200804 19:38:31.464 - DEBUG - Test timeout 2 minutes active. 120.0 seconds left.
+20200804 19:38:31.464 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:31.464 - INFO - +---- START KW: Process.Run Process [ ${java_cli} | thesis.testing.runner.NgRunner | ${group} | ${testName} | shell=yes ]
+20200804 19:38:31.464 - DEBUG - Test timeout 2 minutes active. 120.0 seconds left.
+20200804 19:38:31.464 - INFO - Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchivingApiTests getMissingDataPacketsTest
+20200804 19:38:31.464 - DEBUG - Process configuration:
+cwd:     C:\Users\Asus\Desktop\TestingSystem
+shell:   True
+stdout:  PIPE
+stderr:  PIPE
+alias:   None
+env:     None
+20200804 19:38:31.474 - INFO - Waiting for process to complete.
+20200804 19:38:34.653 - INFO - Process completed.
+20200804 19:38:34.653 - INFO - ${status} = <result object with rc 0>
+20200804 19:38:34.653 - INFO - +---- END KW: Process.Run Process (3189)
+20200804 19:38:34.653 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stdout} ]
+20200804 19:38:34.654 - DEBUG - Test timeout 2 minutes active. 116.81 seconds left.
+20200804 19:38:34.654 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:34.654 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stderr} ]
+20200804 19:38:34.654 - DEBUG - Test timeout 2 minutes active. 116.81 seconds left.
+20200804 19:38:34.654 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:34.654 - INFO - +---- START KW: BuiltIn.Log [ ${status.stdout} ]
+20200804 19:38:34.654 - DEBUG - Test timeout 2 minutes active. 116.81 seconds left.
+20200804 19:38:34.654 - INFO -
+20200804 19:38:34.654 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:34.654 - INFO - +---- START KW: BuiltIn.Log [ ${status.stderr} ]
+20200804 19:38:34.654 - DEBUG - Test timeout 2 minutes active. 116.81 seconds left.
+20200804 19:38:34.654 - INFO -
+20200804 19:38:34.654 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:34.654 - INFO - +---- START KW: OperatingSystem.Get File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:34.654 - DEBUG - Test timeout 2 minutes active. 116.81 seconds left.
+20200804 19:38:34.654 - INFO - Getting file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:34.654 - INFO - ${exitCode} = 0
+20200804 19:38:34.654 - INFO - +---- END KW: OperatingSystem.Get File (0)
+20200804 19:38:34.654 - INFO - +---- START KW: OperatingSystem.Remove File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:34.654 - DEBUG - Test timeout 2 minutes active. 116.81 seconds left.
+20200804 19:38:34.654 - INFO - Removed file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:34.654 - INFO - +---- END KW: OperatingSystem.Remove File (0)
+20200804 19:38:34.654 - INFO - +---- START KW: BuiltIn.Should Be Equal As Integers [ ${exitCode} | 0 | Test failed, examine log in report ]
+20200804 19:38:34.654 - DEBUG - Test timeout 2 minutes active. 116.81 seconds left.
+20200804 19:38:34.654 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20200804 19:38:34.654 - INFO - +---- END KW: BuiltIn.Should Be Equal As Integers (0)
+20200804 19:38:34.654 - INFO - +--- END KW: Run Java test (3190)
+20200804 19:38:34.654 - INFO - +-- END KW: Run archivingAPI test (3190)
+------------------------------------------------------------------------------
+20200804 19:38:34.654 - INFO - +- END TEST: Get missing data packets test (3190)
+------------------------------------------------------------------------------
+20200804 19:38:34.664 - INFO - +- START TEST: Store valid data packets test [ ]
+------------------------------------------------------------------------------
+20200804 19:38:34.664 - INFO - +-- START KW: Run archivingAPI test [ storeValidDataPacketsTest ]
+20200804 19:38:34.664 - INFO - +--- START KW: Run Java test [ thesis.testing.system.archivingTests.ArchivingApiTests | ${testName} ]
+20200804 19:38:34.664 - INFO - +---- START KW: BuiltIn.Log To Console [ . ]
+20200804 19:38:34.664 - DEBUG - Test timeout 2 minutes active. 120.0 seconds left.
+20200804 19:38:34.664 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:34.664 - INFO - +---- START KW: BuiltIn.Log To Console [ Executing Java CLI test ${testName}. ]
+20200804 19:38:34.664 - DEBUG - Test timeout 2 minutes active. 120.0 seconds left.
+20200804 19:38:34.664 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:34.664 - INFO - +---- START KW: Process.Run Process [ ${java_cli} | thesis.testing.runner.NgRunner | ${group} | ${testName} | shell=yes ]
+20200804 19:38:34.664 - DEBUG - Test timeout 2 minutes active. 120.0 seconds left.
+20200804 19:38:34.664 - INFO - Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchivingApiTests storeValidDataPacketsTest
+20200804 19:38:34.664 - DEBUG - Process configuration:
+cwd:     C:\Users\Asus\Desktop\TestingSystem
+shell:   True
+stdout:  PIPE
+stderr:  PIPE
+alias:   None
+env:     None
+20200804 19:38:34.664 - INFO - Waiting for process to complete.
+20200804 19:38:38.406 - INFO - Process completed.
+20200804 19:38:38.407 - INFO - ${status} = <result object with rc 0>
+20200804 19:38:38.407 - INFO - +---- END KW: Process.Run Process (3743)
+20200804 19:38:38.407 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stdout} ]
+20200804 19:38:38.408 - DEBUG - Test timeout 2 minutes active. 116.256 seconds left.
+20200804 19:38:38.409 - INFO - +---- END KW: BuiltIn.Log To Console (2)
+20200804 19:38:38.409 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stderr} ]
+20200804 19:38:38.410 - DEBUG - Test timeout 2 minutes active. 116.254 seconds left.
+20200804 19:38:38.411 - INFO - +---- END KW: BuiltIn.Log To Console (2)
+20200804 19:38:38.412 - INFO - +---- START KW: BuiltIn.Log [ ${status.stdout} ]
+20200804 19:38:38.412 - DEBUG - Test timeout 2 minutes active. 116.252 seconds left.
+20200804 19:38:38.413 - INFO -
+20200804 19:38:38.414 - INFO - +---- END KW: BuiltIn.Log (2)
+20200804 19:38:38.414 - INFO - +---- START KW: BuiltIn.Log [ ${status.stderr} ]
+20200804 19:38:38.415 - DEBUG - Test timeout 2 minutes active. 116.249 seconds left.
+20200804 19:38:38.416 - INFO -
+20200804 19:38:38.416 - INFO - +---- END KW: BuiltIn.Log (2)
+20200804 19:38:38.416 - INFO - +---- START KW: OperatingSystem.Get File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:38.417 - DEBUG - Test timeout 2 minutes active. 116.247 seconds left.
+20200804 19:38:38.417 - INFO - Getting file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:38.418 - INFO - ${exitCode} = 0
+20200804 19:38:38.418 - INFO - +---- END KW: OperatingSystem.Get File (2)
+20200804 19:38:38.418 - INFO - +---- START KW: OperatingSystem.Remove File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:38.418 - DEBUG - Test timeout 2 minutes active. 116.246 seconds left.
+20200804 19:38:38.419 - INFO - Removed file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:38.420 - INFO - +---- END KW: OperatingSystem.Remove File (2)
+20200804 19:38:38.420 - INFO - +---- START KW: BuiltIn.Should Be Equal As Integers [ ${exitCode} | 0 | Test failed, examine log in report ]
+20200804 19:38:38.420 - DEBUG - Test timeout 2 minutes active. 116.244 seconds left.
+20200804 19:38:38.421 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20200804 19:38:38.422 - INFO - +---- END KW: BuiltIn.Should Be Equal As Integers (1)
+20200804 19:38:38.422 - INFO - +--- END KW: Run Java test (3758)
+20200804 19:38:38.422 - INFO - +-- END KW: Run archivingAPI test (3758)
+------------------------------------------------------------------------------
+20200804 19:38:38.422 - INFO - +- END TEST: Store valid data packets test (3758)
+------------------------------------------------------------------------------
+20200804 19:38:38.423 - INFO - +- START TEST: Store invalid data packets test [ ]
+------------------------------------------------------------------------------
+20200804 19:38:38.424 - INFO - +-- START KW: Run archivingAPI test [ storeInvalidDataPacketsTest ]
+20200804 19:38:38.424 - INFO - +--- START KW: Run Java test [ thesis.testing.system.archivingTests.ArchivingApiTests | ${testName} ]
+20200804 19:38:38.425 - INFO - +---- START KW: BuiltIn.Log To Console [ . ]
+20200804 19:38:38.425 - DEBUG - Test timeout 2 minutes active. 119.998 seconds left.
+20200804 19:38:38.426 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:38.426 - INFO - +---- START KW: BuiltIn.Log To Console [ Executing Java CLI test ${testName}. ]
+20200804 19:38:38.426 - DEBUG - Test timeout 2 minutes active. 119.997 seconds left.
+20200804 19:38:38.427 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:38.427 - INFO - +---- START KW: Process.Run Process [ ${java_cli} | thesis.testing.runner.NgRunner | ${group} | ${testName} | shell=yes ]
+20200804 19:38:38.428 - DEBUG - Test timeout 2 minutes active. 119.995 seconds left.
+20200804 19:38:38.428 - INFO - Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchivingApiTests storeInvalidDataPacketsTest
+20200804 19:38:38.428 - DEBUG - Process configuration:
+cwd:     C:\Users\Asus\Desktop\TestingSystem
+shell:   True
+stdout:  PIPE
+stderr:  PIPE
+alias:   None
+env:     None
+20200804 19:38:38.431 - INFO - Waiting for process to complete.
+20200804 19:38:41.934 - INFO - Process completed.
+20200804 19:38:41.934 - INFO - ${status} = <result object with rc 0>
+20200804 19:38:41.944 - INFO - +---- END KW: Process.Run Process (3507)
+20200804 19:38:41.944 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stdout} ]
+20200804 19:38:41.944 - DEBUG - Test timeout 2 minutes active. 116.479 seconds left.
+20200804 19:38:41.944 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:41.944 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stderr} ]
+20200804 19:38:41.944 - DEBUG - Test timeout 2 minutes active. 116.479 seconds left.
+20200804 19:38:41.944 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:41.944 - INFO - +---- START KW: BuiltIn.Log [ ${status.stdout} ]
+20200804 19:38:41.944 - DEBUG - Test timeout 2 minutes active. 116.479 seconds left.
+20200804 19:38:41.944 - INFO -
+20200804 19:38:41.944 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:41.944 - INFO - +---- START KW: BuiltIn.Log [ ${status.stderr} ]
+20200804 19:38:41.944 - DEBUG - Test timeout 2 minutes active. 116.479 seconds left.
+20200804 19:38:41.944 - INFO -
+20200804 19:38:41.944 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:41.944 - INFO - +---- START KW: OperatingSystem.Get File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:41.944 - DEBUG - Test timeout 2 minutes active. 116.479 seconds left.
+20200804 19:38:41.944 - INFO - Getting file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:41.944 - INFO - ${exitCode} = 0
+20200804 19:38:41.944 - INFO - +---- END KW: OperatingSystem.Get File (0)
+20200804 19:38:41.944 - INFO - +---- START KW: OperatingSystem.Remove File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:41.944 - DEBUG - Test timeout 2 minutes active. 116.479 seconds left.
+20200804 19:38:41.944 - INFO - Removed file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:41.944 - INFO - +---- END KW: OperatingSystem.Remove File (0)
+20200804 19:38:41.944 - INFO - +---- START KW: BuiltIn.Should Be Equal As Integers [ ${exitCode} | 0 | Test failed, examine log in report ]
+20200804 19:38:41.944 - DEBUG - Test timeout 2 minutes active. 116.479 seconds left.
+20200804 19:38:41.944 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20200804 19:38:41.944 - INFO - +---- END KW: BuiltIn.Should Be Equal As Integers (0)
+20200804 19:38:41.944 - INFO - +--- END KW: Run Java test (3520)
+20200804 19:38:41.944 - INFO - +-- END KW: Run archivingAPI test (3520)
+------------------------------------------------------------------------------
+20200804 19:38:41.944 - INFO - +- END TEST: Store invalid data packets test (3521)
+------------------------------------------------------------------------------
+20200804 19:38:41.944 - INFO - +- START TEST: Search valid query test dp [ ]
+------------------------------------------------------------------------------
+20200804 19:38:41.944 - INFO - +-- START KW: Run archivingAPI test [ searchValidQueryTestDp ]
+20200804 19:38:41.944 - INFO - +--- START KW: Run Java test [ thesis.testing.system.archivingTests.ArchivingApiTests | ${testName} ]
+20200804 19:38:41.955 - INFO - +---- START KW: BuiltIn.Log To Console [ . ]
+20200804 19:38:41.955 - DEBUG - Test timeout 2 minutes active. 119.989 seconds left.
+20200804 19:38:41.955 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:41.955 - INFO - +---- START KW: BuiltIn.Log To Console [ Executing Java CLI test ${testName}. ]
+20200804 19:38:41.955 - DEBUG - Test timeout 2 minutes active. 119.989 seconds left.
+20200804 19:38:41.955 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:41.955 - INFO - +---- START KW: Process.Run Process [ ${java_cli} | thesis.testing.runner.NgRunner | ${group} | ${testName} | shell=yes ]
+20200804 19:38:41.955 - DEBUG - Test timeout 2 minutes active. 119.989 seconds left.
+20200804 19:38:41.955 - INFO - Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchivingApiTests searchValidQueryTestDp
+20200804 19:38:41.955 - DEBUG - Process configuration:
+cwd:     C:\Users\Asus\Desktop\TestingSystem
+shell:   True
+stdout:  PIPE
+stderr:  PIPE
+alias:   None
+env:     None
+20200804 19:38:41.955 - INFO - Waiting for process to complete.
+20200804 19:38:45.254 - INFO - Process completed.
+20200804 19:38:45.255 - INFO - ${status} = <result object with rc 0>
+20200804 19:38:45.255 - INFO - +---- END KW: Process.Run Process (3300)
+20200804 19:38:45.255 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stdout} ]
+20200804 19:38:45.256 - DEBUG - Test timeout 2 minutes active. 116.688 seconds left.
+20200804 19:38:45.257 - INFO - +---- END KW: BuiltIn.Log To Console (2)
+20200804 19:38:45.257 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stderr} ]
+20200804 19:38:45.257 - DEBUG - Test timeout 2 minutes active. 116.687 seconds left.
+20200804 19:38:45.258 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:45.258 - INFO - +---- START KW: BuiltIn.Log [ ${status.stdout} ]
+20200804 19:38:45.258 - DEBUG - Test timeout 2 minutes active. 116.686 seconds left.
+20200804 19:38:45.258 - INFO -
+20200804 19:38:45.259 - INFO - +---- END KW: BuiltIn.Log (1)
+20200804 19:38:45.259 - INFO - +---- START KW: BuiltIn.Log [ ${status.stderr} ]
+20200804 19:38:45.259 - DEBUG - Test timeout 2 minutes active. 116.685 seconds left.
+20200804 19:38:45.260 - INFO -
+20200804 19:38:45.260 - INFO - +---- END KW: BuiltIn.Log (1)
+20200804 19:38:45.260 - INFO - +---- START KW: OperatingSystem.Get File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:45.260 - DEBUG - Test timeout 2 minutes active. 116.684 seconds left.
+20200804 19:38:45.261 - INFO - Getting file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:45.261 - INFO - ${exitCode} = 0
+20200804 19:38:45.261 - INFO - +---- END KW: OperatingSystem.Get File (1)
+20200804 19:38:45.261 - INFO - +---- START KW: OperatingSystem.Remove File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:45.262 - DEBUG - Test timeout 2 minutes active. 116.682 seconds left.
+20200804 19:38:45.262 - INFO - Removed file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:45.263 - INFO - +---- END KW: OperatingSystem.Remove File (2)
+20200804 19:38:45.263 - INFO - +---- START KW: BuiltIn.Should Be Equal As Integers [ ${exitCode} | 0 | Test failed, examine log in report ]
+20200804 19:38:45.263 - DEBUG - Test timeout 2 minutes active. 116.681 seconds left.
+20200804 19:38:45.264 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20200804 19:38:45.264 - INFO - +---- END KW: BuiltIn.Should Be Equal As Integers (1)
+20200804 19:38:45.264 - INFO - +--- END KW: Run Java test (3320)
+20200804 19:38:45.264 - INFO - +-- END KW: Run archivingAPI test (3320)
+------------------------------------------------------------------------------
+20200804 19:38:45.265 - INFO - +- END TEST: Search valid query test dp (3320)
+------------------------------------------------------------------------------
+20200804 19:38:45.265 - INFO - +- START TEST: Search valid query test date [ ]
+------------------------------------------------------------------------------
+20200804 19:38:45.266 - INFO - +-- START KW: Run archivingAPI test [ searchValidQueryTestDate ]
+20200804 19:38:45.266 - INFO - +--- START KW: Run Java test [ thesis.testing.system.archivingTests.ArchivingApiTests | ${testName} ]
+20200804 19:38:45.267 - INFO - +---- START KW: BuiltIn.Log To Console [ . ]
+20200804 19:38:45.267 - DEBUG - Test timeout 2 minutes active. 119.998 seconds left.
+20200804 19:38:45.268 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:45.268 - INFO - +---- START KW: BuiltIn.Log To Console [ Executing Java CLI test ${testName}. ]
+20200804 19:38:45.268 - DEBUG - Test timeout 2 minutes active. 119.997 seconds left.
+20200804 19:38:45.269 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:45.269 - INFO - +---- START KW: Process.Run Process [ ${java_cli} | thesis.testing.runner.NgRunner | ${group} | ${testName} | shell=yes ]
+20200804 19:38:45.269 - DEBUG - Test timeout 2 minutes active. 119.996 seconds left.
+20200804 19:38:45.270 - INFO - Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchivingApiTests searchValidQueryTestDate
+20200804 19:38:45.270 - DEBUG - Process configuration:
+cwd:     C:\Users\Asus\Desktop\TestingSystem
+shell:   True
+stdout:  PIPE
+stderr:  PIPE
+alias:   None
+env:     None
+20200804 19:38:45.273 - INFO - Waiting for process to complete.
+20200804 19:38:49.251 - INFO - Process completed.
+20200804 19:38:49.252 - INFO - ${status} = <result object with rc 0>
+20200804 19:38:49.252 - INFO - +---- END KW: Process.Run Process (3983)
+20200804 19:38:49.252 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stdout} ]
+20200804 19:38:49.252 - DEBUG - Test timeout 2 minutes active. 116.013 seconds left.
+20200804 19:38:49.253 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:49.253 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stderr} ]
+20200804 19:38:49.254 - DEBUG - Test timeout 2 minutes active. 116.011 seconds left.
+20200804 19:38:49.254 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:49.254 - INFO - +---- START KW: BuiltIn.Log [ ${status.stdout} ]
+20200804 19:38:49.255 - DEBUG - Test timeout 2 minutes active. 116.01 seconds left.
+20200804 19:38:49.255 - INFO -
+20200804 19:38:49.256 - INFO - +---- END KW: BuiltIn.Log (2)
+20200804 19:38:49.256 - INFO - +---- START KW: BuiltIn.Log [ ${status.stderr} ]
+20200804 19:38:49.257 - DEBUG - Test timeout 2 minutes active. 116.008 seconds left.
+20200804 19:38:49.257 - INFO -
+20200804 19:38:49.258 - INFO - +---- END KW: BuiltIn.Log (2)
+20200804 19:38:49.258 - INFO - +---- START KW: OperatingSystem.Get File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:49.258 - DEBUG - Test timeout 2 minutes active. 116.007 seconds left.
+20200804 19:38:49.259 - INFO - Getting file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:49.259 - INFO - ${exitCode} = 0
+20200804 19:38:49.259 - INFO - +---- END KW: OperatingSystem.Get File (1)
+20200804 19:38:49.260 - INFO - +---- START KW: OperatingSystem.Remove File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:49.260 - DEBUG - Test timeout 2 minutes active. 116.005 seconds left.
+20200804 19:38:49.261 - INFO - Removed file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:49.261 - INFO - +---- END KW: OperatingSystem.Remove File (1)
+20200804 19:38:49.261 - INFO - +---- START KW: BuiltIn.Should Be Equal As Integers [ ${exitCode} | 0 | Test failed, examine log in report ]
+20200804 19:38:49.261 - DEBUG - Test timeout 2 minutes active. 116.004 seconds left.
+20200804 19:38:49.262 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20200804 19:38:49.262 - INFO - +---- END KW: BuiltIn.Should Be Equal As Integers (1)
+20200804 19:38:49.262 - INFO - +--- END KW: Run Java test (3996)
+20200804 19:38:49.263 - INFO - +-- END KW: Run archivingAPI test (3997)
+------------------------------------------------------------------------------
+20200804 19:38:49.263 - INFO - +- END TEST: Search valid query test date (3998)
+------------------------------------------------------------------------------
+20200804 19:38:49.264 - INFO - +- START TEST: Search invalid query test [ ]
+------------------------------------------------------------------------------
+20200804 19:38:49.264 - INFO - +-- START KW: Run archivingAPI test [ searchInvalidQueryTest ]
+20200804 19:38:49.265 - INFO - +--- START KW: Run Java test [ thesis.testing.system.archivingTests.ArchivingApiTests | ${testName} ]
+20200804 19:38:49.265 - INFO - +---- START KW: BuiltIn.Log To Console [ . ]
+20200804 19:38:49.265 - DEBUG - Test timeout 2 minutes active. 119.998 seconds left.
+20200804 19:38:49.266 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:49.266 - INFO - +---- START KW: BuiltIn.Log To Console [ Executing Java CLI test ${testName}. ]
+20200804 19:38:49.267 - DEBUG - Test timeout 2 minutes active. 119.996 seconds left.
+20200804 19:38:49.267 - INFO - +---- END KW: BuiltIn.Log To Console (1)
+20200804 19:38:49.267 - INFO - +---- START KW: Process.Run Process [ ${java_cli} | thesis.testing.runner.NgRunner | ${group} | ${testName} | shell=yes ]
+20200804 19:38:49.268 - DEBUG - Test timeout 2 minutes active. 119.995 seconds left.
+20200804 19:38:49.269 - INFO - Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchivingApiTests searchInvalidQueryTest
+20200804 19:38:49.269 - DEBUG - Process configuration:
+cwd:     C:\Users\Asus\Desktop\TestingSystem
+shell:   True
+stdout:  PIPE
+stderr:  PIPE
+alias:   None
+env:     None
+20200804 19:38:49.272 - INFO - Waiting for process to complete.
+20200804 19:38:52.530 - INFO - Process completed.
+20200804 19:38:52.530 - INFO - ${status} = <result object with rc 0>
+20200804 19:38:52.530 - INFO - +---- END KW: Process.Run Process (3263)
+20200804 19:38:52.530 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stdout} ]
+20200804 19:38:52.530 - DEBUG - Test timeout 2 minutes active. 116.733 seconds left.
+20200804 19:38:52.530 - INFO - +---- END KW: BuiltIn.Log To Console (0)
+20200804 19:38:52.530 - INFO - +---- START KW: BuiltIn.Log To Console [ ${status.stderr} ]
+20200804 19:38:52.535 - DEBUG - Test timeout 2 minutes active. 116.728 seconds left.
+20200804 19:38:52.535 - INFO - +---- END KW: BuiltIn.Log To Console (5)
+20200804 19:38:52.535 - INFO - +---- START KW: BuiltIn.Log [ ${status.stdout} ]
+20200804 19:38:52.535 - DEBUG - Test timeout 2 minutes active. 116.728 seconds left.
+20200804 19:38:52.535 - INFO -
+20200804 19:38:52.535 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:52.535 - INFO - +---- START KW: BuiltIn.Log [ ${status.stderr} ]
+20200804 19:38:52.535 - DEBUG - Test timeout 2 minutes active. 116.728 seconds left.
+20200804 19:38:52.535 - INFO -
+20200804 19:38:52.535 - INFO - +---- END KW: BuiltIn.Log (0)
+20200804 19:38:52.535 - INFO - +---- START KW: OperatingSystem.Get File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:52.535 - DEBUG - Test timeout 2 minutes active. 116.728 seconds left.
+20200804 19:38:52.535 - INFO - Getting file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:52.535 - INFO - ${exitCode} = 0
+20200804 19:38:52.535 - INFO - +---- END KW: OperatingSystem.Get File (0)
+20200804 19:38:52.535 - INFO - +---- START KW: OperatingSystem.Remove File [ ${exit_code_path}/exitCode.txt ]
+20200804 19:38:52.535 - DEBUG - Test timeout 2 minutes active. 116.728 seconds left.
+20200804 19:38:52.535 - INFO - Removed file '<a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt">C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt</a>'.
+20200804 19:38:52.535 - INFO - +---- END KW: OperatingSystem.Remove File (0)
+20200804 19:38:52.535 - INFO - +---- START KW: BuiltIn.Should Be Equal As Integers [ ${exitCode} | 0 | Test failed, examine log in report ]
+20200804 19:38:52.535 - DEBUG - Test timeout 2 minutes active. 116.728 seconds left.
+20200804 19:38:52.535 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20200804 19:38:52.535 - INFO - +---- END KW: BuiltIn.Should Be Equal As Integers (0)
+20200804 19:38:52.535 - INFO - +--- END KW: Run Java test (3270)
+20200804 19:38:52.535 - INFO - +-- END KW: Run archivingAPI test (3271)
+------------------------------------------------------------------------------
+20200804 19:38:52.535 - INFO - +- END TEST: Search invalid query test (3272)
+------------------------------------------------------------------------------
+20200804 19:38:52.545 - INFO - + END SUITE: 01 ArchivingAPITests (24434)
+==============================================================================

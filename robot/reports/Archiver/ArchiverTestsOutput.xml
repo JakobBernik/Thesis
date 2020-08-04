@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200804 19:39:01.305" generator="Robot 3.2.1 (Python 2.7.15 on win32)">
+<suite source="C:\Users\Asus\Desktop\TestingSystem\robot\02_ArchiverTests.robot" id="s1" name="02 ArchiverTests">
+<test id="s1-t1" name="Invalid command test">
+<kw name="Run archiver test">
+<arguments>
+<arg>invalidCommandTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:01.365" starttime="20200804 19:39:01.365"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:01.365" starttime="20200804 19:39:01.365"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:01.369" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests invalidCommandTest</msg>
+<msg timestamp="20200804 19:39:01.369" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:04.718" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:04.718" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:04.718" starttime="20200804 19:39:01.365"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:04.720" starttime="20200804 19:39:04.719"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:04.721" starttime="20200804 19:39:04.720"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:04.722" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:04.722" starttime="20200804 19:39:04.721"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:04.724" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:04.724" starttime="20200804 19:39:04.723"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:04.725" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:04.726" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:04.726" starttime="20200804 19:39:04.724"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:04.727" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:04.727" starttime="20200804 19:39:04.726"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:04.728" starttime="20200804 19:39:04.728"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:04.728" starttime="20200804 19:39:01.365"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:04.728" starttime="20200804 19:39:01.360"></status>
+</kw>
+<doc>tests if exception is thrown for unknown command</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:04.728" critical="yes" starttime="20200804 19:39:01.360"></status>
+</test>
+<test id="s1-t2" name="Invalid params for store test">
+<kw name="Run archiver test">
+<arguments>
+<arg>validStoreCommandInvalidParamsTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:04.728" starttime="20200804 19:39:04.728"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:04.728" starttime="20200804 19:39:04.728"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:04.728" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests validStoreCommandInvalidParamsTest</msg>
+<msg timestamp="20200804 19:39:04.735" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:07.875" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:07.875" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:07.875" starttime="20200804 19:39:04.728"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:07.875" starttime="20200804 19:39:07.875"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:07.875" starttime="20200804 19:39:07.875"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:07.875" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:07.875" starttime="20200804 19:39:07.875"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:07.875" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:07.875" starttime="20200804 19:39:07.875"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:07.875" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:07.875" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:07.875" starttime="20200804 19:39:07.875"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:07.885" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:07.885" starttime="20200804 19:39:07.875"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:07.885" starttime="20200804 19:39:07.885"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:07.885" starttime="20200804 19:39:04.728"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:07.885" starttime="20200804 19:39:04.728"></status>
+</kw>
+<doc>tests if exception is thrown for valid store command, wrong params</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:07.885" critical="yes" starttime="20200804 19:39:04.728"></status>
+</test>
+<test id="s1-t3" name="Invalid params for get test">
+<kw name="Run archiver test">
+<arguments>
+<arg>validGetCommandInvalidParamsTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:07.885" starttime="20200804 19:39:07.885"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:07.885" starttime="20200804 19:39:07.885"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:07.885" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests validGetCommandInvalidParamsTest</msg>
+<msg timestamp="20200804 19:39:07.895" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:11.099" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:11.099" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:11.099" starttime="20200804 19:39:07.885"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:11.100" starttime="20200804 19:39:11.099"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:11.102" starttime="20200804 19:39:11.101"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:11.103" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:11.103" starttime="20200804 19:39:11.102"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:11.104" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:11.105" starttime="20200804 19:39:11.104"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:11.106" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:11.107" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:11.107" starttime="20200804 19:39:11.105"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:11.108" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:11.109" starttime="20200804 19:39:11.107"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:11.110" starttime="20200804 19:39:11.109"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:11.110" starttime="20200804 19:39:07.885"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:11.110" starttime="20200804 19:39:07.885"></status>
+</kw>
+<doc>tests if exception is thrown for valid get command, wrong params</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:11.110" critical="yes" starttime="20200804 19:39:07.885"></status>
+</test>
+<test id="s1-t4" name="Invalid params for search test">
+<kw name="Run archiver test">
+<arguments>
+<arg>validSearchCommandInvalidParamsTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:11.113" starttime="20200804 19:39:11.113"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:11.114" starttime="20200804 19:39:11.114"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:11.115" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests validSearchCommandInvalidParamsTest</msg>
+<msg timestamp="20200804 19:39:11.118" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:14.295" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:14.295" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:14.295" starttime="20200804 19:39:11.114"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:14.295" starttime="20200804 19:39:14.295"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:14.295" starttime="20200804 19:39:14.295"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:14.295" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:14.295" starttime="20200804 19:39:14.295"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:14.295" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:14.295" starttime="20200804 19:39:14.295"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:14.295" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:14.295" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:14.295" starttime="20200804 19:39:14.295"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:14.295" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:14.305" starttime="20200804 19:39:14.295"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:14.305" starttime="20200804 19:39:14.305"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:14.305" starttime="20200804 19:39:11.112"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:14.305" starttime="20200804 19:39:11.112"></status>
+</kw>
+<doc>tests if exception is thrown for valid search command, wrong params</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:14.305" critical="yes" starttime="20200804 19:39:11.111"></status>
+</test>
+<test id="s1-t5" name="Get existing data packets test">
+<kw name="Run archiver test">
+<arguments>
+<arg>getValidDataPacketsTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:14.305" starttime="20200804 19:39:14.305"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:14.305" starttime="20200804 19:39:14.305"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:14.305" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests getValidDataPacketsTest</msg>
+<msg timestamp="20200804 19:39:14.315" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:17.525" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:17.525" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:17.525" starttime="20200804 19:39:14.305"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:17.525" starttime="20200804 19:39:17.525"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:17.525" starttime="20200804 19:39:17.525"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:17.525" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:17.525" starttime="20200804 19:39:17.525"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:17.535" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:17.535" starttime="20200804 19:39:17.525"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:17.535" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:17.535" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:17.535" starttime="20200804 19:39:17.535"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:17.535" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:17.535" starttime="20200804 19:39:17.535"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:17.535" starttime="20200804 19:39:17.535"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:17.535" starttime="20200804 19:39:14.305"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:17.535" starttime="20200804 19:39:14.305"></status>
+</kw>
+<doc>tests if requesting existing data returns it</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:17.535" critical="yes" starttime="20200804 19:39:14.305"></status>
+</test>
+<test id="s1-t6" name="Get non-existing data packets test">
+<kw name="Run archiver test">
+<arguments>
+<arg>getInvalidDataPacketsTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:17.535" starttime="20200804 19:39:17.535"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:17.545" starttime="20200804 19:39:17.535"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:17.545" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests getInvalidDataPacketsTest</msg>
+<msg timestamp="20200804 19:39:17.550" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:20.715" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:20.715" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:20.715" starttime="20200804 19:39:17.545"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:20.715" starttime="20200804 19:39:20.715"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:20.715" starttime="20200804 19:39:20.715"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:20.715" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:20.715" starttime="20200804 19:39:20.715"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:20.715" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:20.715" starttime="20200804 19:39:20.715"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:20.715" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:20.715" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:20.715" starttime="20200804 19:39:20.715"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:20.725" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:20.725" starttime="20200804 19:39:20.715"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:20.725" starttime="20200804 19:39:20.725"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:20.725" starttime="20200804 19:39:17.535"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:20.725" starttime="20200804 19:39:17.535"></status>
+</kw>
+<doc>tests if exception is thrown when requesting non-existing data</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:20.725" critical="yes" starttime="20200804 19:39:17.535"></status>
+</test>
+<test id="s1-t7" name="Store valid data test">
+<kw name="Run archiver test">
+<arguments>
+<arg>storeValidDataPointTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:20.725" starttime="20200804 19:39:20.725"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:20.725" starttime="20200804 19:39:20.725"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:20.725" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests storeValidDataPointTest</msg>
+<msg timestamp="20200804 19:39:20.735" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:23.890" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:23.891" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:23.891" starttime="20200804 19:39:20.725"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:23.892" starttime="20200804 19:39:23.891"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:23.893" starttime="20200804 19:39:23.892"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:23.894" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:23.894" starttime="20200804 19:39:23.893"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:23.896" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:23.896" starttime="20200804 19:39:23.895"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:23.897" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:23.898" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:23.898" starttime="20200804 19:39:23.897"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:23.900" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:23.900" starttime="20200804 19:39:23.898"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:23.901" starttime="20200804 19:39:23.900"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:23.901" starttime="20200804 19:39:20.725"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:23.902" starttime="20200804 19:39:20.725"></status>
+</kw>
+<doc>tests if storing valid data works</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:23.902" critical="yes" starttime="20200804 19:39:20.725"></status>
+</test>
+<test id="s1-t8" name="Store invalid data test">
+<kw name="Run archiver test">
+<arguments>
+<arg>storeInvalidDataPointTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:23.905" starttime="20200804 19:39:23.904"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:23.906" starttime="20200804 19:39:23.906"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:23.906" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests storeInvalidDataPointTest</msg>
+<msg timestamp="20200804 19:39:23.906" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:27.005" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:27.005" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:27.005" starttime="20200804 19:39:23.906"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:27.005" starttime="20200804 19:39:27.005"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:27.005" starttime="20200804 19:39:27.005"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:27.005" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:27.005" starttime="20200804 19:39:27.005"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:27.005" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:27.005" starttime="20200804 19:39:27.005"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:27.005" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:27.005" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:27.005" starttime="20200804 19:39:27.005"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:27.015" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:27.015" starttime="20200804 19:39:27.005"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:27.015" starttime="20200804 19:39:27.015"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:27.015" starttime="20200804 19:39:23.904"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:27.015" starttime="20200804 19:39:23.903"></status>
+</kw>
+<doc>tests if storing invalid data throws an exception</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:27.015" critical="yes" starttime="20200804 19:39:23.902"></status>
+</test>
+<test id="s1-t9" name="Search by id test">
+<kw name="Run archiver test">
+<arguments>
+<arg>searchValidDataPacketsDpTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:27.015" starttime="20200804 19:39:27.015"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:27.015" starttime="20200804 19:39:27.015"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:27.015" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests searchValidDataPacketsDpTest</msg>
+<msg timestamp="20200804 19:39:27.025" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:30.207" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:30.207" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:30.207" starttime="20200804 19:39:27.015"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:30.209" starttime="20200804 19:39:30.208"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:30.210" starttime="20200804 19:39:30.209"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:30.211" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:30.212" starttime="20200804 19:39:30.210"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:30.213" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:30.213" starttime="20200804 19:39:30.212"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:30.214" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:30.215" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:30.215" starttime="20200804 19:39:30.213"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:30.217" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:30.217" starttime="20200804 19:39:30.215"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:30.219" starttime="20200804 19:39:30.218"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:30.219" starttime="20200804 19:39:27.015"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:30.219" starttime="20200804 19:39:27.015"></status>
+</kw>
+<doc>tests if searching by point id works</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:30.219" critical="yes" starttime="20200804 19:39:27.015"></status>
+</test>
+<test id="s1-t10" name="Search by date test">
+<kw name="Run archiver test">
+<arguments>
+<arg>searchValidDataPacketsDateTest</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:30.223" starttime="20200804 19:39:30.222"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:30.224" starttime="20200804 19:39:30.223"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:30.225" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests searchValidDataPacketsDateTest</msg>
+<msg timestamp="20200804 19:39:30.229" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:33.485" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:33.485" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:33.485" starttime="20200804 19:39:30.224"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:33.485" starttime="20200804 19:39:33.485"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:33.485" starttime="20200804 19:39:33.485"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:33.485" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:33.485" starttime="20200804 19:39:33.485"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:33.485" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:33.485" starttime="20200804 19:39:33.485"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:33.485" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:33.495" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:33.495" starttime="20200804 19:39:33.485"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:33.495" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:33.495" starttime="20200804 19:39:33.495"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:33.495" starttime="20200804 19:39:33.495"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:33.495" starttime="20200804 19:39:30.221"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:33.495" starttime="20200804 19:39:30.221"></status>
+</kw>
+<doc>tests if searching by capture date works</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:33.495" critical="yes" starttime="20200804 19:39:30.220"></status>
+</test>
+<test id="s1-t11" name="Invalid search test">
+<kw name="Run archiver test">
+<arguments>
+<arg>searchInvalidDataPackets</arg>
+</arguments>
+<kw name="Run Java test">
+<arguments>
+<arg>thesis.testing.system.archivingTests.ArchiverTests</arg>
+<arg>${testName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:33.495" starttime="20200804 19:39:33.495"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Executing Java CLI test ${testName}.</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:33.495" starttime="20200804 19:39:33.495"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${java_cli}</arg>
+<arg>thesis.testing.runner.NgRunner</arg>
+<arg>${group}</arg>
+<arg>${testName}</arg>
+<arg>shell=yes</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200804 19:39:33.495" level="INFO">Starting process:
+C:/Users/Asus/Desktop/TestingSystem/scripts/java-cli.sh thesis.testing.runner.NgRunner thesis.testing.system.archivingTests.ArchiverTests searchInvalidDataPackets</msg>
+<msg timestamp="20200804 19:39:33.505" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200804 19:39:36.668" level="INFO">Process completed.</msg>
+<msg timestamp="20200804 19:39:36.668" level="INFO">${status} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200804 19:39:36.668" starttime="20200804 19:39:33.495"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:36.668" starttime="20200804 19:39:36.668"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:36.671" starttime="20200804 19:39:36.668"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stdout}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:36.671" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:36.671" starttime="20200804 19:39:36.671"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${status.stderr}</arg>
+</arguments>
+<msg timestamp="20200804 19:39:36.671" level="INFO"></msg>
+<status status="PASS" endtime="20200804 19:39:36.671" starttime="20200804 19:39:36.671"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<assign>
+<var>${exitCode}</var>
+</assign>
+<msg timestamp="20200804 19:39:36.675" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200804 19:39:36.675" level="INFO">${exitCode} = 0
+</msg>
+<status status="PASS" endtime="20200804 19:39:36.675" starttime="20200804 19:39:36.671"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${exit_code_path}/exitCode.txt</arg>
+</arguments>
+<msg timestamp="20200804 19:39:36.675" html="yes" level="INFO">Removed file '&lt;a href="file://C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt"&gt;C:\Users\Asus\Desktop\TestingSystem\robot\exitCode.txt&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20200804 19:39:36.675" starttime="20200804 19:39:36.675"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${exitCode}</arg>
+<arg>0</arg>
+<arg>Test failed, examine log in report</arg>
+</arguments>
+<status status="PASS" endtime="20200804 19:39:36.675" starttime="20200804 19:39:36.675"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:36.675" starttime="20200804 19:39:33.495"></status>
+</kw>
+<status status="PASS" endtime="20200804 19:39:36.675" starttime="20200804 19:39:33.495"></status>
+</kw>
+<doc>tests if searching with invalid query throws an exception</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20200804 19:39:36.675" critical="yes" starttime="20200804 19:39:33.495"></status>
+</test>
+<status status="PASS" endtime="20200804 19:39:36.675" starttime="20200804 19:39:01.305"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="11">Critical Tests</stat>
+<stat fail="0" pass="11">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="02 ArchiverTests" pass="11">02 ArchiverTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
