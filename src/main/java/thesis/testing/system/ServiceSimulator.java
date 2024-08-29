@@ -278,7 +278,7 @@ public class ServiceSimulator implements ChangeListener {
 
     @Override
     public void dataChange(DataPoint point) {
-        getMock().dataChange(point);
+        serviceSimulatorMock.dataChange(point);
     }
 
     public HttpHandler getArchivingHandler() {

@@ -51,11 +51,10 @@ public class OldbSimulator implements Runnable,OldbAPI {
                     System.out.println("No data points in database.");
                     return null;
                 }
-
                 int indx =(int)(change*dataPoints.size());
                 DataPoint dp = dataPoints.get(indx);
-                dataPoints.set(indx,dp);
                 dp.setValue((int) (change*change*42));
+                dataPoints.set(indx,dp);
                 // override data retrieval methods after update
                 Mockito.doAnswer(new Answer() {
                     @Override
